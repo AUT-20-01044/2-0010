@@ -1,0 +1,21 @@
+image: docker:19.03
+
+services:
+  - docker:19.03-dind
+  - mongo:latest
+
+stages:
+  - test
+
+test:
+  timeout: 15m
+  stage: test
+  tags:
+    - docker
+    - linux
+  before_script:
+    - apk add --update nodejs npm
+    - npm install
+  script:
+    - npm run test
+  coverage: /All\sfiles.*?\s+(\d+.\d+)/

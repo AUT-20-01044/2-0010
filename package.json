@@ -1,0 +1,32 @@
+{
+  "name": "2-0010",
+  "version": "0.2.0",
+  "description": "MongoDB generic schema library.",
+  "main": "server.js",
+  "scripts": {
+    "test": "NODE_ENV=production jest",
+    "test:dev": "NODE_ENV=development jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Robert Carey",
+  "license": "ISC",
+  "dependencies": {
+    "jest-html-reporter": "^3.3.0",
+    "mongoose": "^5.10.0",
+    "mongoose-beautiful-unique-validation": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.12",
+    "jest": "^26.4.0",
+    "node-mocks-http": "^1.9.0",
+    "nodemon": "^2.0.4",
+    "sinon": "^9.0.3"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
